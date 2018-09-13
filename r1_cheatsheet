@@ -1,0 +1,56 @@
+### DOCKER-COMPOSE
+```
+docker-compose up -d
+```
+List images and containers:
+```
+docker-compose images
+docker-compose ps
+```
+Stop all containers:
+```
+docker-compose stop
+```
+Shutdown/Clean up:
+```
+docker-compose down           # will remove the containers.
+docker-compose down -volumes  # will remove the containers and volumes.
+```
+
+Connect to a container:
+```
+docker-compose exec server_a /bin/bash
+```
+### DOCKERFILE
+#### Build a container
+docker build .
+
+#### SSH into a running container
+#### https://stackoverflow.com/questions/30172605/how-to-get-into-a-docker-container
+docker exec -it <container ID or name> bash
+
+DOCKER CLEANUP COMMANDS
+#### Kill all running containers
+docker kill $(docker ps -q)
+
+#### Delete dangling images
+docker rmi $(docker images -q -f dangling=true)
+
+#### Remove all stopped containers
+docker rm $(docker ps -a -q)
+
+USEFUL ONELINERS
+#### Download an image
+docker pull image_name
+
+#### Start and stop the container
+docker [start|stop] container_name
+
+#### Create and start container, run command
+docker run -ti --name container_name image_name command
+
+#### Create and start container, run command, destroy container
+docker run --rm -ti image_name command
+
+#### Example filesystem and port mappings
+docker run -it --rm -p 8080:8080 -v /path/to/agent.jar:/agent.jar -e JAVA_OPTS=”-javaagent:/agent.jar” tomcat:8.0.29-jre8
