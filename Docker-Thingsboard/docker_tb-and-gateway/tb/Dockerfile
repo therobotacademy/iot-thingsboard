@@ -21,9 +21,9 @@ ADD run-application.sh /run-application.sh
 ADD thingsboard.deb /thingsboard.deb
 
 # Include Thingsboard IoT Gateway in the same container
-# RUN wget https://github.com/thingsboard/thingsboard-gateway/releases/download/v1.4.0.1/tb-gateway-1.4.0.deb &&\
+RUN wget https://github.com/thingsboard/thingsboard-gateway/releases/download/v1.4.0.1/tb-gateway-1.4.0.deb &&\
+dpkg -i tb-gateway-1.4.0.deb
 
-RUN dpkg -i tb-gateway-1.4.0.deb
 RUN rm /tb-gateway.deb
 
 RUN apt-get update \
