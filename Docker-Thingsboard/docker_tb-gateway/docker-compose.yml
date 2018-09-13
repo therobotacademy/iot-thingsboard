@@ -1,0 +1,15 @@
+version: '2'
+services:
+  thingsboard-gateway:
+    build:
+      context: .
+      dockerfile: Dockerfile
+#    restart: always
+    expose:
+    - '9090'
+    volumes:
+    - ~/thingsboard/data/gateway-conf:/etc/tb-gateway/conf
+    - ~/thingsboard/data/gateway-log:/var/log/tb-gateway
+    environment:
+    - GATEWAY_ACCESS_TOKEN=${GATEWAY_ACCESS_TOKEN}
+    - GATEWAY_HOST=${GATEWAY_HOST}
