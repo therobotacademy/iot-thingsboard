@@ -44,17 +44,23 @@ curl -v -X GET http://ec2-34-245-115-53.eu-west-1.compute.amazonaws.com/api/v1/$
 ## [MQTT Gateway API Reference](https://thingsboard.io/docs/reference/gateway-mqtt-api/)
 
 ##### username es el ACCESS_TOKEN del Gateway
-ACCESS_TOKEN = nJoZhCnAXmgzhW4KQZJ3
+```
+username =
+ - localhost         IgRyOQxWFdzuPxLCVK2Y
+ - demo (playground) CwLsqWkEujOVPICPCoa3
+ - AWS instance      fP1vwik4mhUTM6zirEl6
 
+password = <leave empty>
+```
+#### ATTRIBUTES: topic *'v1/gateway/attributes'*
 Publish **attribute** data:
 ```
-topic: v1/gateway/attributes
 {"SN-001": {"temperature": 42}}
 ```
 
+#### TELEMETRY: topic *'v1/gateway/telemetry'*
 Publish **telemetry** data (one point and its timestamp):
 ```
-topic: v1/gateway/telemetry
 {"SN-001": [{"ts": 1483228860000,"values": {"temperature": 42}}]}
 ```
 Several points with timestamps:
