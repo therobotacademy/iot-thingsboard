@@ -14,12 +14,14 @@
 # limitations under the License.
 #
 
-#FROM openjdk:8-jre
-FROM thingsboard/application:2.1.0
+FROM openjdk:8-jre
+#FROM thingsboard/application:2.1.0
+
 # Thingsboard application Debian package
 #RUN wget https://github.com/thingsboard/thingsboard/releases/download/v2.1/thingsboard-2.1.deb \
 #        -O thingsboard.deb
-#COPY thingsboard.deb /thingsboard.deb
+
+COPY thingsboard.deb /thingsboard.deb
 
 # Include Thingsboard IoT Gateway (Debian package) in the same container
 #RUN wget https://github.com/thingsboard/thingsboard-gateway/releases/download/v1.4.0.1/tb-gateway-1.4.0.deb \
@@ -33,6 +35,7 @@ RUN apt-get update \
         && rm -r /var/lib/apt/lists/*
 
 # Script to install the debian packages and launch the IoT environment
-COPY run-app_and_gateway.sh /run-app_and_gateway.sh
-RUN chmod +x /run-app_and_gateway.sh
-# CMD /run-app_and_gateway.sh
+COPY run_app_and_gateway.sh /run_app_and_gateway.sh
+RUN chmod +x /run_app_and_gateway.sh
+
+CMD /run_app_and_gateway.sh

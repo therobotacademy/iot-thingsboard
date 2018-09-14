@@ -27,4 +27,5 @@ extensions
 Después de la edición de este fichero:
 ```
 $ sudo service tb-gateway restart
+cat /etc/tb-gateway/conf/tb-gateway.yml
 ```

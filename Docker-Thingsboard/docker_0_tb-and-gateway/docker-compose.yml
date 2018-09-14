@@ -18,10 +18,11 @@ version: '2'
 
 services:
   tb:
-    build: .
-#    image: "thingsboard/application:2.1.0"
-#    image brjapon/tb-and-gateway:2
-    container_name: "tb_and_gateway"
+#    build: .
+    image: "thingsboard/application:2.1.0"
+    container_name: "tb_and_tb-g"
+#   container_name: "thingsboard"
+
     restart: always
     ports:
       - "8080:8080"
@@ -35,4 +36,4 @@ services:
     volumes:
       - "${HSQLDB_DATA_DIR}:/usr/share/thingsboard/data/sql"
     entrypoint: /run-application.sh
-#    entrypoint: /run-app_and_gateway.sh
+#    entrypoint: /run_app_and_gateway.sh

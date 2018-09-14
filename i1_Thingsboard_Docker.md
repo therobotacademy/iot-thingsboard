@@ -98,13 +98,15 @@ gateways:
 
 ### Docker Compose with Thingsboard and IoT Gateway inside the same container
 ```
-docker build -t brjapon/tb-and-gateway:2 .
-docker run brjapon/tb-and-gateway:2
----
+cd ~/github/iot-thingsboard/Docker-Thingsboard/docker_0_tb-and-gateway
+# OR
+cd ~/tb_and_gateway # Symbolic link
+
 docker-compose up -d
-docker exec -it tb_and_gateway bash
+
+docker exec -it <container=folder_name> bash
 ```
 
 ```
-cat /etc/tb-gateway/conf/tb-gateway-yml
+cat /etc/tb-gateway/conf/tb-gateway.yml
 ```
