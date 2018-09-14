@@ -5,7 +5,9 @@ Post a temperature to the Gateway
 
 ### LOCALHOST instance - to GATEWAY telemetry
 ```
-export ACCESS_TOKEN=IgRyOQxWFdzuPxLCVK2Y
+export ACCESS_TOKEN=IgRyOQxWFdzuPxLCVK2Y (antes)
+
+export ACCESS_TOKEN=B4ceQJYA8LZmr3Eu0FH0
 curl -v -X POST -d "{\"temperature\": 35}" http://localhost:8080/api/v1/$ACCESS_TOKEN/telemetry --header "Content-Type:application/json"
 ```
 
@@ -46,7 +48,8 @@ curl -v -X GET http://ec2-34-245-115-53.eu-west-1.compute.amazonaws.com/api/v1/$
 ##### username es el ACCESS_TOKEN del Gateway
 ```
 username =
- - localhost         IgRyOQxWFdzuPxLCVK2Y
+                     IgRyOQxWFdzuPxLCVK2Y (antes)
+ - localhost         B4ceQJYA8LZmr3Eu0FH0
  - demo (playground) CwLsqWkEujOVPICPCoa3
  - AWS instance      fP1vwik4mhUTM6zirEl6
 
