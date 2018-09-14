@@ -2,6 +2,13 @@
 
 ## [HTTP Device API Reference](https://thingsboard.io/docs/reference/http-api/)
 Post a temperature to the Gateway
+
+### LOCALHOST instance - to GATEWAY telemetry
+```
+export ACCESS_TOKEN=IgRyOQxWFdzuPxLCVK2Y
+curl -v -X POST -d "{\"temperature\": 35}" http://localhost:8080/api/v1/$ACCESS_TOKEN/telemetry --header "Content-Type:application/json"
+```
+
 ### DEMO instance - to GATEWAY telemetry
 ```
 export ACCESS_TOKEN=CwLsqWkEujOVPICPCoa3

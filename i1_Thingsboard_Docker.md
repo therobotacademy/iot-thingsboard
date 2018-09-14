@@ -95,3 +95,16 @@ gateways:
               type: "HTTP"
               extensionConfiguration: http-config.json
 ```
+
+### Docker Compose with Thingsboard and IoT Gateway inside the same container
+```
+docker build -t brjapon/tb-and-gateway:2 .
+docker run brjapon/tb-and-gateway:2
+---
+docker-compose up -d
+docker exec -it tb_and_gateway bash
+```
+
+```
+cat /etc/tb-gateway/conf/tb-gateway-yml
+```
