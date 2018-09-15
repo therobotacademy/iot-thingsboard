@@ -1,0 +1,38 @@
+server:
+  # Server bind address
+  address: "0.0.0.0"
+  # Server bind port
+  port: "9090"
+
+# Check new version updates parameters
+updates:
+  # Enable/disable updates checking.
+  enabled: "${UPDATES_ENABLED:true}"
+
+gateways:
+  tenants:
+    -
+      label: "Tenant"
+      reporting:
+        interval: 60000
+      persistence:
+        type: file
+        path: storage
+        bufferSize: 1000
+      connection:
+        host: "${GATEWAY_HOST:YOUR_HOST}"
+        port: 1883
+        retryInterval: 3000
+        maxInFlight: 1000
+        security:
+          accessToken: "${GATEWAY_ACCESS_TOKEN:YOUR_TOKEN}"
+      remoteConfiguration: false
+      extensions:
+        -
+          id: "http"
+          type: "HTTP"
+          extensionConfiguration: http-config.json
+        -
+          id: "mqtt-aws"
+          type: "MQTT"
+          extensionConfiguration: mqtt-config_AWS.json

@@ -1,11 +1,11 @@
 [{
-		"id": "mqtt",
+		"id": "mqtt_AWS",
 		"type": "MQTT",
 		"configuration": {
 			"brokers": [{
 					"host": "localhost",
-					"port": 1883,
-					"ssl": false,
+					"port": 8883,
+					"ssl": true,
 					"retryInterval": 3000,
 					"credentials": {
 						"type": "anonymous"
