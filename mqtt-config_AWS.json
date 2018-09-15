@@ -21,11 +21,16 @@
             "attributes": [
               {
                 "type": "string",
-                "key": "clickType",
-                "value": "${$.clickType}"
+                "key": "batteryVoltage",
+                "value": "${$.batteryVoltage}"
               }
             ],
             "timeseries": [
+              {
+                "type": "string",
+                "key": "clickType",
+                "value": "${$.clickType}"
+              },	
               {
                 "type": "string",
                 "key": "batteryVoltage",
