@@ -21,6 +21,16 @@
             "attributes": [
               {
                 "type": "string",
+                "key": "serialNumber",
+                "value": "${$.serialNumber}"
+              },
+              {
+                "type": "string",
+                "key": "clickType",
+                "value": "${$.clickType}"
+              },
+              {
+                "type": "string",
                 "key": "batteryVoltage",
                 "value": "${$.batteryVoltage}"
               }
@@ -30,7 +40,7 @@
                 "type": "string",
                 "key": "clickType",
                 "value": "${$.clickType}"
-              },	
+              },
               {
                 "type": "string",
                 "key": "batteryVoltage",
@@ -86,7 +96,7 @@
         {
           "topicFilter": "sensor/+/connect",
           "deviceNameTopicExpression": "(?<=sensor\/)(.*?)(?=\/connect)"
-        }		
+        }
       ],
       "disconnectRequests": [
         {
