@@ -1,0 +1,341 @@
+{
+  "title": "Grada PM-RH2",
+  "configuration": {
+    "description": "Estado de grada",
+    "widgets": {
+      "b8a1b500-49a7-e3f4-cf85-81eecf6a58da": {
+        "isSystemType": true,
+        "bundleAlias": "cards",
+        "typeAlias": "simple_card",
+        "type": "latest",
+        "title": "New widget",
+        "sizeX": 8,
+        "sizeY": 3,
+        "config": {
+          "datasources": [
+            {
+              "type": "entity",
+              "dataKeys": [
+                {
+                  "name": "estado",
+                  "type": "attribute",
+                  "label": "estado",
+                  "color": "#2196f3",
+                  "settings": {},
+                  "_hash": 0.9793471914917978
+                }
+              ],
+              "entityAliasId": "e943142e-5da9-5977-7861-7e401750c0b2"
+            }
+          ],
+          "timewindow": {
+            "realtime": {
+              "timewindowMs": 60000
+            }
+          },
+          "showTitle": false,
+          "backgroundColor": "#ff5722",
+          "color": "rgba(255, 255, 255, 0.87)",
+          "padding": "16px",
+          "settings": {
+            "labelPosition": "top"
+          },
+          "title": "New Simple card",
+          "dropShadow": true,
+          "enableFullscreen": true,
+          "titleStyle": {
+            "fontSize": "16px",
+            "fontWeight": 400
+          },
+          "units": "°C",
+          "decimals": 0,
+          "useDashboardTimewindow": true,
+          "showLegend": false,
+          "widgetStyle": {},
+          "actions": {}
+        },
+        "id": "b8a1b500-49a7-e3f4-cf85-81eecf6a58da"
+      },
+      "ef2e53e2-b196-bc98-b7ac-7a21759171c8": {
+        "isSystemType": true,
+        "bundleAlias": "cards",
+        "typeAlias": "timeseries_table",
+        "type": "timeseries",
+        "title": "New widget",
+        "sizeX": 8,
+        "sizeY": 8,
+        "config": {
+          "datasources": [
+            {
+              "type": "entity",
+              "dataKeys": [
+                {
+                  "name": "estado",
+                  "type": "timeseries",
+                  "label": "estado",
+                  "color": "#2196f3",
+                  "settings": {
+                    "useCellStyleFunction": false,
+                    "cellStyleFunction": "",
+                    "useCellContentFunction": false,
+                    "cellContentFunction": ""
+                  },
+                  "_hash": 0.7814164673055111
+                }
+              ],
+              "entityAliasId": "e943142e-5da9-5977-7861-7e401750c0b2"
+            }
+          ],
+          "timewindow": {
+            "history": {
+              "interval": 1800000,
+              "timewindowMs": 604800000
+            },
+            "aggregation": {
+              "type": "NONE",
+              "limit": 200
+            }
+          },
+          "showTitle": true,
+          "backgroundColor": "rgb(255, 255, 255)",
+          "color": "rgba(0, 0, 0, 0.87)",
+          "padding": "8px",
+          "settings": {
+            "showTimestamp": true
+          },
+          "title": "New Timeseries table",
+          "dropShadow": true,
+          "enableFullscreen": true,
+          "titleStyle": {
+            "fontSize": "16px",
+            "fontWeight": 400
+          },
+          "useDashboardTimewindow": false,
+          "showLegend": false,
+          "widgetStyle": {},
+          "actions": {}
+        },
+        "id": "ef2e53e2-b196-bc98-b7ac-7a21759171c8"
+      },
+      "543d9112-08cc-a192-3cd3-172dfda293b1": {
+        "isSystemType": true,
+        "bundleAlias": "cards",
+        "typeAlias": "simple_card",
+        "type": "latest",
+        "title": "New widget",
+        "sizeX": 12,
+        "sizeY": 3,
+        "config": {
+          "datasources": [
+            {
+              "type": "entity",
+              "dataKeys": [
+                {
+                  "name": "serialNumber",
+                  "type": "attribute",
+                  "label": "serialNumber",
+                  "color": "#2196f3",
+                  "settings": {},
+                  "_hash": 0.20836602457589282
+                }
+              ],
+              "entityAliasId": "bc5e82e9-95ed-4b19-2bfc-454ef77f9d51"
+            }
+          ],
+          "timewindow": {
+            "realtime": {
+              "timewindowMs": 60000
+            }
+          },
+          "showTitle": false,
+          "backgroundColor": "#ff5722",
+          "color": "rgba(255, 255, 255, 0.87)",
+          "padding": "16px",
+          "settings": {
+            "labelPosition": "top"
+          },
+          "title": "New Simple card",
+          "dropShadow": true,
+          "enableFullscreen": true,
+          "titleStyle": {
+            "fontSize": "16px",
+            "fontWeight": 400
+          },
+          "units": "°C",
+          "decimals": 0,
+          "useDashboardTimewindow": true,
+          "showLegend": false,
+          "widgetStyle": {},
+          "actions": {}
+        },
+        "id": "543d9112-08cc-a192-3cd3-172dfda293b1"
+      },
+      "5d327a9a-9465-2505-165b-5fed061a6fac": {
+        "isSystemType": true,
+        "bundleAlias": "cards",
+        "typeAlias": "timeseries_table",
+        "type": "timeseries",
+        "title": "New widget",
+        "sizeX": 8,
+        "sizeY": 8,
+        "config": {
+          "datasources": [
+            {
+              "type": "entity",
+              "dataKeys": [
+                {
+                  "name": "clickType",
+                  "type": "timeseries",
+                  "label": "clickType",
+                  "color": "#2196f3",
+                  "settings": {
+                    "useCellStyleFunction": false,
+                    "cellStyleFunction": "",
+                    "useCellContentFunction": false,
+                    "cellContentFunction": ""
+                  },
+                  "_hash": 0.6100369834213527
+                },
+                {
+                  "name": "batteryVoltage",
+                  "type": "timeseries",
+                  "label": "batteryVoltage",
+                  "color": "#4caf50",
+                  "settings": {
+                    "useCellStyleFunction": false,
+                    "cellStyleFunction": "",
+                    "useCellContentFunction": false,
+                    "cellContentFunction": ""
+                  },
+                  "_hash": 0.09714966054873964
+                }
+              ],
+              "entityAliasId": "bc5e82e9-95ed-4b19-2bfc-454ef77f9d51"
+            }
+          ],
+          "timewindow": {
+            "history": {
+              "interval": 1800000,
+              "timewindowMs": 604800000
+            },
+            "aggregation": {
+              "type": "NONE",
+              "limit": 200
+            }
+          },
+          "showTitle": true,
+          "backgroundColor": "rgb(255, 255, 255)",
+          "color": "rgba(0, 0, 0, 0.87)",
+          "padding": "8px",
+          "settings": {
+            "showTimestamp": true
+          },
+          "title": "New Timeseries table",
+          "dropShadow": true,
+          "enableFullscreen": true,
+          "titleStyle": {
+            "fontSize": "16px",
+            "fontWeight": 400
+          },
+          "useDashboardTimewindow": false,
+          "showLegend": false,
+          "widgetStyle": {},
+          "actions": {}
+        },
+        "id": "5d327a9a-9465-2505-165b-5fed061a6fac"
+      }
+    },
+    "states": {
+      "default": {
+        "name": "Grada",
+        "root": true,
+        "layouts": {
+          "main": {
+            "widgets": {
+              "b8a1b500-49a7-e3f4-cf85-81eecf6a58da": {
+                "sizeX": 8,
+                "sizeY": 3,
+                "row": 0,
+                "col": 0
+              },
+              "ef2e53e2-b196-bc98-b7ac-7a21759171c8": {
+                "sizeX": 8,
+                "sizeY": 8,
+                "row": 3,
+                "col": 0
+              },
+              "543d9112-08cc-a192-3cd3-172dfda293b1": {
+                "sizeX": 12,
+                "sizeY": 3,
+                "row": 0,
+                "col": 9
+              },
+              "5d327a9a-9465-2505-165b-5fed061a6fac": {
+                "sizeX": 8,
+                "sizeY": 8,
+                "row": 3,
+                "col": 9
+              }
+            },
+            "gridSettings": {
+              "backgroundColor": "#eeeeee",
+              "color": "rgba(0,0,0,0.870588)",
+              "columns": 24,
+              "margins": [
+                10,
+                10
+              ],
+              "backgroundSizeMode": "100%"
+            }
+          }
+        }
+      }
+    },
+    "entityAliases": {
+      "e943142e-5da9-5977-7861-7e401750c0b2": {
+        "id": "e943142e-5da9-5977-7861-7e401750c0b2",
+        "alias": "grada PM-RH2",
+        "filter": {
+          "type": "singleEntity",
+          "resolveMultiple": false,
+          "singleEntity": {
+            "entityType": "DEVICE",
+            "id": "01860590-ba84-11e8-8ec7-d92fd207b2e0"
+          }
+        }
+      },
+      "bc5e82e9-95ed-4b19-2bfc-454ef77f9d51": {
+        "id": "bc5e82e9-95ed-4b19-2bfc-454ef77f9d51",
+        "alias": "Boton PM-RH2 (..WSR)",
+        "filter": {
+          "type": "singleEntity",
+          "resolveMultiple": false,
+          "singleEntity": {
+            "entityType": "DEVICE",
+            "id": "b25a28f0-ba85-11e8-8ec7-d92fd207b2e0"
+          }
+        }
+      }
+    },
+    "timewindow": {
+      "realtime": {
+        "interval": 1800000,
+        "timewindowMs": 604800000
+      },
+      "aggregation": {
+        "type": "NONE",
+        "limit": 200
+      }
+    },
+    "settings": {
+      "stateControllerId": "entity",
+      "showTitle": false,
+      "showDashboardsSelect": true,
+      "showEntitiesSelect": true,
+      "showDashboardTimewindow": true,
+      "showDashboardExport": true,
+      "toolbarAlwaysOpen": true
+    }
+  },
+  "name": "Grada PM-RH2"
+}
